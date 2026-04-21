@@ -110,7 +110,9 @@ export default function PostCard({ post: initialPost, onDelete }) {
 
   if (deleted) return null;
 
-  const displayedComments = showAllComments ? post.comments : post.comments?.slice(-2);
+  const displayedComments = showAllComments
+  ? (post.comments || [])
+  : (post.comments || []).slice(-2);
 
   return (
     <article className={styles.card}>
