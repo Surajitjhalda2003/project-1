@@ -4,7 +4,7 @@ import axios from 'axios';
 // - In production (built): Express on :5002 serves both React + API, so /api works perfectly.
 // - In dev (npm start on :3000): CRA proxy in package.json forwards /api → :5002.
 const API = axios.create({
-  baseURL: '/api',
+  baseURL: `${process.env.REACT_APP_API_URL}/api`,
   withCredentials: true,
 });
 
