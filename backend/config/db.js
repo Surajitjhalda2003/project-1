@@ -1,12 +1,11 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const connectDB = async () => {
   try {
-    // Mongoose 7+ removed useNewUrlParser & useUnifiedTopology options
-    const conn = await mongoose.connect(process.env.MONGO_URI);
-    console.log(`✅ MongoDB Connected: ${conn.connection.host}`);
+    await mongoose.connect(process.env.MONGO_URI);
+    console.log("MongoDB Connected ✅");
   } catch (error) {
-    console.error(`❌ MongoDB Connection Error: ${error.message}`);
+    console.error("MongoDB Error ❌:", error.message);
     process.exit(1);
   }
 };
