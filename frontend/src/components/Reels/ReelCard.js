@@ -23,7 +23,6 @@ export default function ReelCard({ reel, isActive }) {
   const [commentText,  setCommentText]  = useState('');
   const [isMuted,      setIsMuted]      = useState(false);
   const [isPaused,     setIsPaused]     = useState(false);
-  const [isPlaying,    setIsPlaying]    = useState(false);
 
   // Play/pause based on visibility
   useEffect(() => {
@@ -133,8 +132,6 @@ export default function ReelCard({ reel, isActive }) {
           muted={isMuted}
           playsInline
           className={styles.video}
-          onPlay={() => setIsPlaying(true)}
-          onPause={() => setIsPlaying(false)}
         />
 
         {isPaused && (
