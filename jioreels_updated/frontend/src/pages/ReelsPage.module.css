@@ -1,0 +1,31 @@
+.page {
+  position: relative;
+  height: 100vh;
+  background: #000;
+  overflow: hidden;
+}
+
+.tabs {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 24px;
+  z-index: 30;
+}
+
+.tab {
+  color: rgba(255,255,255,0.6);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+  transition: color var(--transition), border-color var(--transition);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+.tab.active {
+  color: white;
+  border-bottom-color: white;
+}

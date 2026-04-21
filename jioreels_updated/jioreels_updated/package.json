@@ -1,0 +1,16 @@
+{
+  "name": "jioreels",
+  "version": "1.0.0",
+  "description": "JIOREELS - Full Stack Social Media Platform",
+  "scripts": {
+    "install-all": "npm install --prefix backend && npm install --prefix frontend",
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm start --prefix frontend\"",
+    "start": "npm start --prefix backend",
+    "build": "npm run build --prefix frontend",
+    "prod": "npm run build && NODE_ENV=production npm start --prefix backend",
+    "postinstall": "npm run install-all"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

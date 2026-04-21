@@ -1,0 +1,58 @@
+.fullscreen {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.logoLoader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.logoLoader span {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+  letter-spacing: -1px;
+}
+
+.bar {
+  width: 120px;
+  height: 3px;
+  background: var(--bg-tertiary);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  background: var(--brand-gradient);
+  border-radius: 99px;
+  animation: loading 1.4s ease-in-out infinite;
+}
+
+@keyframes loading {
+  0% { width: 0%; margin-left: 0; }
+  50% { width: 80%; margin-left: 10%; }
+  100% { width: 0%; margin-left: 100%; }
+}
+
+.spinner {
+  border-radius: 50%;
+  border: 2px solid var(--border-primary);
+  border-top-color: var(--brand-primary);
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+.sm { width: 20px; height: 20px; }
+.md { width: 32px; height: 32px; }
+.lg { width: 48px; height: 48px; }
+
+@keyframes spin { to { transform: rotate(360deg); } }
