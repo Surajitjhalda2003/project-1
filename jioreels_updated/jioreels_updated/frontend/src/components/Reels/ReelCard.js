@@ -30,7 +30,7 @@ export default function ReelCard({ reel, isActive }) {
     const video = videoRef.current;
     if (!video) return;
     if (isActive) {
-      video.play().then(() => setIsPlaying(true)).catch(() => {});
+      
     } else {
       video.pause();
       video.currentTime = 0;

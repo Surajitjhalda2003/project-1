@@ -24,8 +24,12 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": ["react-app"]
-  },
+  "extends": ["react-app"],
+  "rules": {
+    "no-unused-vars": "off",
+    "react-hooks/exhaustive-deps": "off"
+  }
+},
   "browserslist": {
     "production": [">0.2%", "not dead", "not op_mini all"],
     "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]

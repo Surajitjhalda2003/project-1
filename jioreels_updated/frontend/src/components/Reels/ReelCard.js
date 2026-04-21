@@ -34,7 +34,6 @@ export default function ReelCard({ reel, isActive }) {
     } else {
       video.pause();
       video.currentTime = 0;
-      setIsPlaying(false);
     }
   }, [isActive]);
 

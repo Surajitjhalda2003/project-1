@@ -29,7 +29,7 @@ export default function ReelCard({ reel, isActive }) {
     const video = videoRef.current;
     if (!video) return;
     if (isActive) {
-      video.play().then(() => setIsPlaying(true)).catch(() => {});
+      video.play().catch(() => {});
     } else {
       video.pause();
       video.currentTime = 0;
@@ -132,6 +132,7 @@ export default function ReelCard({ reel, isActive }) {
           muted={isMuted}
           playsInline
           className={styles.video}
+
         />
 
         {isPaused && (
