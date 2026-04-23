@@ -275,3 +275,5 @@ Set env vars: `REACT_APP_API_URL`, `REACT_APP_SOCKET_URL`
 ---
 
 ## 🇮🇳 Made with ❤️ in India — JIOREELS © 2025
+#   j i o r e e l s 2 . 0  
+ 
